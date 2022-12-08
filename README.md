@@ -15,25 +15,25 @@ For the trigger we made the Rasberry Pi a Access Point (AP) the steps that we fo
 
 To further troubleshoot these were the commands that we ran to ensure that each steps and configurations were properly ran:
 
-`sudo apt install hostapd dnsmasq iptables`
-`sudo systemctl stop hostapd`
-`sudo systemctl stop dnsmasq`
-`sudo nano /etc/dhcpcd.conf`
-`sudo systemctl restart dhcpcd`
-`systemctl daemon-reload`
-`sudo nano /etc/hostapd/hostapd.conf`
-`sudo nano /etc/default/hostapd`
-`sudo nano /etc/init.d/hostapd`
-`sudo nano /etc/dnsmasq.conf`
-`sudo nano /etc/sysctl.conf`
-`sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"`
-`sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE`
-`sudo systemctl unmask hostapd`
-`sudo systemctl enable hostapd`
-`sudo systemctl start hostapd`
-`sudo service dnsmasq start`
-`systemctl daemon-reload`
-`sudo reboot`
+- `sudo apt install hostapd dnsmasq iptables`
+- `sudo systemctl stop hostapd`
+- `sudo systemctl stop dnsmasq`
+- `sudo nano /etc/dhcpcd.conf`
+- `sudo systemctl restart dhcpcd`
+- `systemctl daemon-reload`
+- `sudo nano /etc/hostapd/hostapd.conf`
+- `sudo nano /etc/default/hostapd`
+- `sudo nano /etc/init.d/hostapd`
+- `sudo nano /etc/dnsmasq.conf`
+- `sudo nano /etc/sysctl.conf`
+- `sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"`
+- `sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE`
+- `sudo systemctl unmask hostapd`
+- `sudo systemctl enable hostapd`
+- `sudo systemctl start hostapd`
+- `sudo service dnsmasq start`
+- `systemctl daemon-reload`
+- `sudo reboot`
 
 ## Script for the Trigger
 
