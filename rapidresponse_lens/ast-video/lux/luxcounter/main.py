@@ -26,7 +26,7 @@ from azure.iot.device.aio import IoTHubDeviceClient
 people = 0
 banana = 0
 
-cs="HostName=iothub-ast-dev.azure-devices.net;DeviceId=ast-dev-device;SharedAccessKey=P1OVBzSv4MOVgaN/AfLzVaQh25omh8bX5d7FIuNeCvQ="
+cs="" # input IOT Hub connection
 CONNECTION_STRING = cs
 
 # PAYLOAD = '{{"peoplecount": {people}, "banana": {banana}}}'
@@ -155,8 +155,8 @@ with dai.Device(pipeline) as device:
         print ( "Message successfully sent" )
         await asyncio.sleep(0.2 )
 
-    server_address = "13.67.185.108"
-    server_port = "41130"
+    server_address = "" # flask server address
+    server_port = "" # flask server
 
     rpi_opt_message = "sent from camera node"
     frame_publisher = FramePublisher(server_port, server_address, 25, opt_message=rpi_opt_message)
